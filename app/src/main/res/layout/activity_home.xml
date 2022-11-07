@@ -1,25 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="@drawable/gradient_background_2">
 
-    <TextView
-        android:layout_width="0dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Nama: Tri Ilman A. Fattah\nNIM:  32602000101"
-        android:textAlignment="textStart"
-        android:textSize="32sp"
-        android:lineSpacingExtra="16dp"
-        android:textColor="@color/white"
-        android:background="@android:color/holo_green_light"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:shadowRadius="@integer/material_motion_duration_short_2"/>
+        android:layout_margin="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        android:background="@drawable/custom_edittext">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:drawableTop="@drawable/profilku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tri Ilman A. Fattah"
+            android:id="@+id/nameText"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="#667eea"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="32602000101"
+            android:id="@+id/nimText"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:textColor="#667eea"/>
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
